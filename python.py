@@ -4,7 +4,7 @@ import time
 from bs4 import BeautifulSoup
 import re
 import json
-s = "wwww"
+
 url = 'http://www.met.gov.my/forecast/weather/town'
 response = requests.get(url)
 result = BeautifulSoup(response.text, "html.parser")
