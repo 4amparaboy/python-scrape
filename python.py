@@ -19,7 +19,7 @@ for row in oke:
         formula_1 = (2 * i - 1)
         res = {}
         res['Tarikh'] = row("td",{"style":"text-align: center; vertical-align: middle;"})[formula_1 - 1].get_text(separator=" ").strip()
-        cuaca = row("td",{"style":"text-align: center; vertical-align: middle;"})[formula_1 + 1].text
+        cuaca = row("td",{"style":"text-align: center; vertical-align: middle;"})[formula_1].text
         res['Cuaca'] = re.sub(r'\n|\s+$', r'', cuaca)
         ramalan = row("td",{"style":"text-align: left; vertical-align: middle;"})[i].text
         ramalan_2 = re.sub(r'\u00b0|\s+$|^\W+', r'', ramalan)
